@@ -18,13 +18,13 @@ const routes: Routes = [
     component: ToolbarNavigationComponent,
     children: [
       {
-        path: 'autos',
+        path: 'cars',
         loadChildren: () => import('./modules/cars/cars.module')
           .then(m => m.CarsModule)
       },
       {
         path: '**',
-        redirectTo: '/autos/usados',
+        redirectTo: '/cars/used-cars',
         pathMatch: 'full'
       }
     ]
