@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "handcloud-frontend"
+    }
+  },
+  "defaultProject": "handcloud-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

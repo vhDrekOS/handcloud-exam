@@ -1,0 +1,14 @@
+<h1 mat-dialog-title class="text-center">{{ modalData.title ? modalData.title : 'CONFIRM'}}</h1>
+<div mat-dialog-content>
+  <p class="text-center">
+    {{ modalData.message }}
+  </p>
+</div>
+<div mat-dialog-actions align="center" class="avts-button-row">
+  <button mat-button color="warn" *ngIf="modalData.showCancel" (click)="onCancel()">
+    {{ modalData.cancelLabel ? modalData.cancelLabel : 'CANCEL'}}
+  </button>
+  <button mat-flat-button cdkFocusInitial color="primary" *ngIf="modalData.showAccept" (click)="onAccept()">
+    {{ modalData.acceptLabel ? modalData.acceptLabel : 'ACCEPT'}}
+  </button>
+</div>
