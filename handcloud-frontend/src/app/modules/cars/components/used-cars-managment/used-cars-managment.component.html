@@ -4,6 +4,7 @@
     <div class="col-12">
       <form [formGroup]="carForm">
         <mat-form-field>
+          <mat-label>Brand</mat-label>
           <mat-select placeholder="Select Brand" formControlName="brand">
             <mat-option *ngFor="let brand of brands" [value]="brand.value">
               {{ brand.viewValue }}
@@ -16,7 +17,8 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="text" placeholder="Model" formControlName="model">
+          <mat-label>Model</mat-label>
+          <input matInput type="text" placeholder="Model" formControlName="model" maxlength="50">
           <mat-error>
             <div *ngIf="form.model.errors">
               <div *ngIf="form.model.errors.required">This field is required</div>
@@ -24,6 +26,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field>
+          <mat-label>Year</mat-label>
           <mat-select placeholder="Select Year" formControlName="year">
             <mat-option *ngFor="let year of years" [value]="year.value">
               {{ year.viewValue }}
@@ -36,6 +39,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field>
+          <mat-label>Kilometers</mat-label>
           <input matInput type="number" placeholder="Kilometers" formControlName="kilometers" min="0" max="1000000">
           <mat-error>
             <div *ngIf="form.kilometers.errors">
@@ -46,6 +50,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field>
+          <mat-label>Price</mat-label>
           <input matInput type="number" placeholder="Price" formControlName="price" min="0" max="10000000">
           <mat-error>
             <div *ngIf="form.price.errors">
@@ -56,7 +61,8 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="text" placeholder="Description" formControlName="description">
+          <mat-label>Description</mat-label>
+          <input matInput type="text" placeholder="Description" formControlName="description" maxlength="100">
           <mat-error>
             <div *ngIf="form.description.errors">
               <div *ngIf="form.description.errors.required">This field is required</div>

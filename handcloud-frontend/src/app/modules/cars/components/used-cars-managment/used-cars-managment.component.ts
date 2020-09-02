@@ -50,12 +50,12 @@ export class UsedCarsManagmentComponent implements OnInit {
     this.isUpdate = !isNullOrUndefined(data);
     this.carForm = this.formBuilder.group({
       id: [null],
-      brand: [null, Validators.required],
-      model: [null, Validators.required],
+      brand: [null, [Validators.required, Validators.maxLength(50)]],
+      model: [null, [Validators.required, Validators.maxLength(50)]],
       year: [null, Validators.required],
       kilometers: [null, [Validators.required, Validators.min(0), Validators.max(1000000)]],
       price: [null, [Validators.required, Validators.min(1), Validators.max(10000000)]],
-      description: [null, Validators.required],
+      description: [null, [Validators.required, Validators.maxLength(100)]],
     });
   }
 

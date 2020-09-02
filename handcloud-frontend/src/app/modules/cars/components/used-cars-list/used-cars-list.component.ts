@@ -41,9 +41,10 @@ export class UsedCarsListComponent implements OnInit {
       if (success) {
         this.snackBar.open('RECORD CREATED');
         this.loadCars();
-      } else {
-        this.snackBar.open('AN ERROR OCCURRED WHILE CREATING THE RECORD');
       }
+      //  else {
+      //   this.snackBar.open('AN ERROR OCCURRED WHILE CREATING THE RECORD');
+      // }
     });
   }
 
@@ -54,9 +55,10 @@ export class UsedCarsListComponent implements OnInit {
       if (success) {
         this.snackBar.open('RECORD UPDATED');
         this.loadCars();
-      } else {
-        this.snackBar.open('AN ERROR OCCURRED WHILE EDITING THE RECORD');
       }
+      //  else {
+      //   this.snackBar.open('AN ERROR OCCURRED WHILE EDITING THE RECORD');
+      // }
     });
   }
 
